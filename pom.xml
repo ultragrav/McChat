@@ -31,6 +31,7 @@
             <groupId>net.kyori</groupId>
             <artifactId>text</artifactId>
             <version>1.12-1.6.5</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

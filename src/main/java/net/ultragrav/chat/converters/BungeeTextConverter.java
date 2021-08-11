@@ -41,8 +41,6 @@ public class BungeeTextConverter implements Converter<BaseComponent> {
         comp.setClickEvent(convertEvent(component.getClickEvent()));
         comp.setHoverEvent(convertEvent(component.getHoverEvent()));
 
-        comp.setInsertion(component.getInsertion());
-
         if (!component.getExtra().isEmpty()) {
             List<BaseComponent> extra = new ArrayList<>();
             for (Component ex : component.getExtra()) {
