@@ -2,6 +2,7 @@ package net.ultragrav.chat.builder;
 
 import net.ultragrav.chat.components.Component;
 import net.ultragrav.chat.components.TextComponent;
+import net.ultragrav.chat.converters.Converter;
 import net.ultragrav.chat.converters.LegacyConverter;
 import net.ultragrav.chat.events.ClickEvent;
 import net.ultragrav.chat.events.HoverEvent;
@@ -112,5 +113,16 @@ public class ChatBuilder {
      */
     public Component build() {
         return comp;
+    }
+
+    /**
+     * Convert this component into a different format
+     *
+     * @param converter Converter
+     * @param <T>       Format Type
+     * @return Converted component
+     */
+    public <T> T convert(Converter<T> converter) {
+        return converter.convert(build());
     }
 }
