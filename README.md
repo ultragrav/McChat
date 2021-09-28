@@ -11,7 +11,7 @@ A lightweight Minecraft chat wrapper
 
 <dependency>
     <groupId>net.ultragrav</groupId>
-    <artifactId>McCHat</artifactId>
+    <artifactId>McChat</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
