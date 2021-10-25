@@ -2,6 +2,7 @@ package net.ultragrav.chat.converters.nms;
 
 import net.minecraft.server.v1_12_R1.*;
 import net.ultragrav.chat.components.*;
+import net.ultragrav.chat.converters.BungeeTextConverter;
 import net.ultragrav.chat.converters.Converter;
 import net.ultragrav.chat.events.ClickEvent;
 import net.ultragrav.chat.events.HoverEvent;
@@ -11,6 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NMS1_12Converter implements Converter<IChatBaseComponent> {
+    public static final NMS1_12Converter INSTANCE = new NMS1_12Converter();
+
+    private NMS1_12Converter() {}
+
     @Override
     public IChatBaseComponent convert(Component component) {
         IChatBaseComponent comp;
