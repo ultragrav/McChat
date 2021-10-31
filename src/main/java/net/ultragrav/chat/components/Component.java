@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 
 @Setter
 @Getter
-@ToString(exclude = "parent")
 @EqualsAndHashCode(exclude = "parent")
 public abstract class Component {
     @Setter(AccessLevel.NONE)
