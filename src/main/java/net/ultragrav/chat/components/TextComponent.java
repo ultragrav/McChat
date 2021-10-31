@@ -29,6 +29,11 @@ public class TextComponent extends Component {
         return builder(text).build();
     }
 
+    @Override
+    public String toString() {
+        return text + super.toString();
+    }
+
     @AllArgsConstructor
     public static class Builder extends Component.Builder<TextComponent, Builder> {
         private String text;

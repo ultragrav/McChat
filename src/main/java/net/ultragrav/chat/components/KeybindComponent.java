@@ -29,8 +29,6 @@ public class KeybindComponent extends Component {
         return builder(keybind).build();
     }
 
-
-
     public static class Builder extends Component.Builder<KeybindComponent, Builder> {
         private String keybind;
 

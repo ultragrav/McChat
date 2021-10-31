@@ -7,6 +7,7 @@ import net.ultragrav.chat.formatting.TextColor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Setter
 @Getter
@@ -117,6 +118,10 @@ public abstract class Component {
     public void addExtra(Component comp) {
         this.extra.add(comp);
         comp.parent = this;
+    }
+
+    public String toString() {
+        return extra.stream().map(Component::toString).collect(Collectors.joining());
     }
 
     @SuppressWarnings("unchecked")

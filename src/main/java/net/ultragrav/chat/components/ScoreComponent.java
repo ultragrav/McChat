@@ -36,6 +36,11 @@ public class ScoreComponent extends Component {
         return builder(name, objective, value).build();
     }
 
+    @Override
+    public String toString() {
+        return value + super.toString();
+    }
+
     @AllArgsConstructor
     public static class Builder extends Component.Builder<ScoreComponent, Builder> {
         private String name;
