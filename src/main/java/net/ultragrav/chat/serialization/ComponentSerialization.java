@@ -12,6 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ComponentSerialization {
+    /**
+     * Initialize the serializers for Component classes.
+     * <p>
+     * Note: This requires the Serializer library
+     */
     public static void init() {
         Serializer<Component> ser;
         Serializers.registerSerializer(Component.class, ser = new Serializer<Component>() {
@@ -40,7 +45,8 @@ public class ComponentSerialization {
                     writeComponentList(serializer, tc.getExtra());
                 }
 
-                serializer.writeInt(comp.getColor().ordinal());
+                if (comp.getColor() == null) serializer.writeInt(-1);
+                else serializer.writeInt(comp.getColor().ordinal());
                 serializer.writeObject(comp.getBold());
                 serializer.writeObject(comp.getItalic());
                 serializer.writeObject(comp.getUnderlined());
@@ -79,7 +85,8 @@ public class ComponentSerialization {
                         throw new IllegalStateException("Found invalid component type while deserializing");
                 }
 
-                c.setColor(TextColor.values()[serializer.readInt()]);
+                int col = serializer.readInt();
+                if (col != -1) c.setColor(TextColor.values()[col]);
                 c.setBold(serializer.readObject());
                 c.setItalic(serializer.readObject());
                 c.setUnderlined(serializer.readObject());
