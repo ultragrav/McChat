@@ -30,6 +30,9 @@ public class TranslatableComponent extends Component {
     public static TranslatableComponent of(String key) {
         return builder(key).build();
     }
+    public static TranslatableComponent of(String key, List<Component> args) {
+        return builder(key).args(args).build();
+    }
 
     public static class Builder extends Component.Builder<TranslatableComponent, Builder> {
         private String key;
