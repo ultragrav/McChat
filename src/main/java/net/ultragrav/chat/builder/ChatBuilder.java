@@ -3,7 +3,7 @@ package net.ultragrav.chat.builder;
 import net.ultragrav.chat.components.Component;
 import net.ultragrav.chat.components.TextComponent;
 import net.ultragrav.chat.converters.Converter;
-import net.ultragrav.chat.converters.LegacyConverter;
+import net.ultragrav.chat.converters.FullLegacyConverter;
 import net.ultragrav.chat.events.ClickEvent;
 import net.ultragrav.chat.events.HoverEvent;
 
@@ -35,7 +35,7 @@ public class ChatBuilder {
      * @return TextComponent
      */
     private Component fromString(String text) {
-        return LegacyConverter.AMPERSAND.convert(text);
+        return FullLegacyConverter.INSTANCE.convert(text);
     }
 
     /**
@@ -100,7 +100,7 @@ public class ChatBuilder {
      * @return this
      */
     public ChatBuilder addText(String str, HoverEvent e, ClickEvent e2) {
-        Component c = LegacyConverter.AMPERSAND.convert(str);
+        Component c = fromString(str);
         c.setHoverEvent(e);
         c.setClickEvent(e2);
         return addComponent(c);
