@@ -25,7 +25,7 @@
 
         <repository>
             <id>ultragrav</id>
-            <url>http://mvn.ultragrav.net/</url>
+            <url>https://mvn.ultragrav.net/</url>
         </repository>
     </repositories>
 
