@@ -22,11 +22,6 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
-
-        <repository>
-            <id>ultragrav</id>
-            <url>https://mvn.ultragrav.net/</url>
-        </repository>
     </repositories>
 
     <dependencies>
