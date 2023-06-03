@@ -15,6 +15,10 @@
 
     <repositories>
         <repository>
+            <id>ultragrav</id>
+            <url>https://mvn.ultragrav.net/repository/maven-public/</url>
+        </repository>
+        <repository>
             <id>bungeecord-repo</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
@@ -55,7 +59,7 @@
         <dependency>
             <groupId>net.ultragrav</groupId>
             <artifactId>Serializer</artifactId>
-            <version>1.2.15</version>
+            <version>1.2.18</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
