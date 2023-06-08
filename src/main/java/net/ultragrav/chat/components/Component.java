@@ -24,6 +24,8 @@ public abstract class Component {
     private Boolean strikethrough;
     private Boolean obfuscated;
 
+    private String font;
+
     // Events
     private ClickEvent clickEvent;
     private HoverEvent hoverEvent;
@@ -32,13 +34,15 @@ public abstract class Component {
 
     private List<Component> extra;
 
-    protected Component(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra) {
+    protected Component(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, String font, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra) {
         this.color = color;
         this.bold = bold;
         this.italic = italic;
         this.underlined = underlined;
         this.strikethrough = strikethrough;
         this.obfuscated = obfuscated;
+
+        this.font = font;
 
         this.clickEvent = clickEvent;
         this.hoverEvent = hoverEvent;
@@ -133,6 +137,8 @@ public abstract class Component {
         private Boolean strikethrough;
         private Boolean obfuscated;
 
+        private String font;
+
         // Events
         private ClickEvent clickEvent;
         private HoverEvent hoverEvent;
@@ -152,6 +158,8 @@ public abstract class Component {
             this.underlined = c.underlined;
             this.strikethrough = c.strikethrough;
             this.obfuscated = c.obfuscated;
+
+            this.font = c.font;
 
             this.clickEvent = c.clickEvent;
             this.hoverEvent = c.hoverEvent;
@@ -188,6 +196,11 @@ public abstract class Component {
 
         public B obfuscated(boolean obfuscated) {
             this.obfuscated = obfuscated;
+            return (B) this;
+        }
+
+        public B font(String font) {
+            this.font = font;
             return (B) this;
         }
 

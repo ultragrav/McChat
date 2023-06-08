@@ -43,6 +43,8 @@ public class KyoriConverter implements Converter<net.kyori.text.Component> {
         comp.decoration(TextDecoration.STRIKETHROUGH, convertState(component.getStrikethrough()));
         comp.decoration(TextDecoration.OBFUSCATED, convertState(component.getObfuscated()));
 
+        // TODO: Font
+
         comp.clickEvent(convertEvent(component.getClickEvent()));
         comp.hoverEvent(convertEvent(component.getHoverEvent()));
 
@@ -80,6 +82,8 @@ public class KyoriConverter implements Converter<net.kyori.text.Component> {
         comp.setUnderlined(convertState(component.decoration(TextDecoration.UNDERLINE)));
         comp.setStrikethrough(convertState(component.decoration(TextDecoration.STRIKETHROUGH)));
         comp.setObfuscated(convertState(component.decoration(TextDecoration.OBFUSCATED)));
+
+        // TODO: Font
 
         comp.setClickEvent(convertEvent(component.clickEvent()));
         comp.setHoverEvent(convertEvent(component.hoverEvent()));

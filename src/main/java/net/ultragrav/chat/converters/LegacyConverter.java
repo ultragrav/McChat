@@ -7,6 +7,11 @@ import net.ultragrav.chat.formatting.TextColor;
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 
+/**
+ * Converts a component to a legacy string with formatting codes.
+ * <p>
+ * Note: Does not support fonts
+ */
 public class LegacyConverter implements Converter<String> {
     public static final LegacyConverter MINECRAFT = new LegacyConverter('§');
     public static final LegacyConverter AMPERSAND = new LegacyConverter('&');

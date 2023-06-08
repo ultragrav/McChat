@@ -7,6 +7,11 @@ import net.ultragrav.chat.formatting.TextColor;
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 
+/**
+ * Converts a component to a legacy string with all formatting codes.
+ * <p>
+ * Note: Does not support fonts
+ */
 public class FullLegacyConverter implements Converter<String> {
     public static final FullLegacyConverter INSTANCE = new FullLegacyConverter();
 

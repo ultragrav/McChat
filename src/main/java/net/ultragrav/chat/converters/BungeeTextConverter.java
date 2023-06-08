@@ -38,6 +38,8 @@ public class BungeeTextConverter implements Converter<BaseComponent> {
         comp.setStrikethrough(component.getStrikethrough());
         comp.setObfuscated(component.getObfuscated());
 
+        comp.setFont(component.getFont());
+
         comp.setClickEvent(convertEvent(component.getClickEvent()));
         comp.setHoverEvent(convertEvent(component.getHoverEvent()));
 
@@ -67,6 +69,8 @@ public class BungeeTextConverter implements Converter<BaseComponent> {
         comp.setUnderlined(other.isUnderlinedRaw());
         comp.setStrikethrough(other.isStrikethroughRaw());
         comp.setObfuscated(other.isObfuscatedRaw());
+
+        comp.setFont(other.getFont());
 
         comp.setClickEvent(convertEvent(other.getClickEvent()));
         comp.setHoverEvent(convertEvent(other.getHoverEvent()));

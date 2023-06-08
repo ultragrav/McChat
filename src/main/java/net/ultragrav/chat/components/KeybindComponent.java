@@ -11,8 +11,8 @@ import java.util.List;
 public class KeybindComponent extends Component {
     private String keybind;
 
-    protected KeybindComponent(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra, String keybind) {
-        super(color, bold, italic, underlined, strikethrough, obfuscated, clickEvent, hoverEvent, insertion, extra);
+    protected KeybindComponent(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, String font, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra, String keybind) {
+        super(color, bold, italic, underlined, strikethrough, obfuscated, font, clickEvent, hoverEvent, insertion, extra);
         this.keybind = keybind;
     }
 

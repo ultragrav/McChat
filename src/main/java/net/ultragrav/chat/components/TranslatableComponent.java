@@ -1,6 +1,5 @@
 package net.ultragrav.chat.components;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import net.ultragrav.chat.events.ClickEvent;
 import net.ultragrav.chat.events.HoverEvent;
@@ -13,8 +12,8 @@ public class TranslatableComponent extends Component {
     private String key;
     private List<Component> args;
 
-    protected TranslatableComponent(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra, String key, List<Component> args) {
-        super(color, bold, italic, underlined, strikethrough, obfuscated, clickEvent, hoverEvent, insertion, extra);
+    protected TranslatableComponent(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, String font, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra, String key, List<Component> args) {
+        super(color, bold, italic, underlined, strikethrough, obfuscated, font, clickEvent, hoverEvent, insertion, extra);
         this.key = key;
         this.args = args;
     }
@@ -27,9 +26,11 @@ public class TranslatableComponent extends Component {
     public static Builder builder(String key) {
         return new Builder(key);
     }
+
     public static TranslatableComponent of(String key) {
         return builder(key).build();
     }
+
     public static TranslatableComponent of(String key, List<Component> args) {
         return builder(key).args(args).build();
     }
@@ -52,10 +53,12 @@ public class TranslatableComponent extends Component {
             this.key = key;
             return this;
         }
+
         public Builder args(List<Component> args) {
             this.args = args;
             return this;
         }
+
         public Builder addArg(Component comp) {
             this.args.add(comp);
             return this;

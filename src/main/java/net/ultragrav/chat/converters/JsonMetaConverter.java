@@ -50,13 +50,17 @@ public class JsonMetaConverter implements Converter<JsonMeta> {
             meta.set("italic", component.isItalic());
         }
         if (component.getUnderlined() != null) {
-            meta.set("underline", component.isUnderlined());
+            meta.set("underlined", component.isUnderlined());
         }
         if (component.getStrikethrough() != null) {
             meta.set("strikethrough", component.isStrikethrough());
         }
         if (component.getObfuscated() != null) {
             meta.set("obfuscated", component.isObfuscated());
+        }
+
+        if (component.getFont() != null) {
+            meta.set("font", component.getFont());
         }
 
         if (component.getClickEvent() != null) {
@@ -115,13 +119,17 @@ public class JsonMetaConverter implements Converter<JsonMeta> {
             builder.italic(other.get("italic"));
         }
         if (other.get("underline") != null) {
-            builder.underlined(other.get("underline"));
+            builder.underlined(other.get("underlined"));
         }
         if (other.get("strikethrough") != null) {
             builder.strikethrough(other.get("strikethrough"));
         }
         if (other.get("obfuscated") != null) {
             builder.obfuscated(other.get("obfuscated"));
+        }
+
+        if (other.get("font") != null) {
+            builder.font(other.get("font"));
         }
 
         if (other.get("clickEvent") != null) {

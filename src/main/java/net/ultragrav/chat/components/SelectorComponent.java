@@ -12,8 +12,8 @@ import java.util.List;
 public class SelectorComponent extends Component {
     private String selector;
 
-    protected SelectorComponent(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra, String selector) {
-        super(color, bold, italic, underlined, strikethrough, obfuscated, clickEvent, hoverEvent, insertion, extra);
+    protected SelectorComponent(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, String font, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra, String selector) {
+        super(color, bold, italic, underlined, strikethrough, obfuscated, font, clickEvent, hoverEvent, insertion, extra);
         this.selector = selector;
     }
 

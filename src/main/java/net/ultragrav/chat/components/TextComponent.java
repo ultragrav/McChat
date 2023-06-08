@@ -12,8 +12,8 @@ import java.util.List;
 public class TextComponent extends Component {
     private String text;
 
-    protected TextComponent(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra, String text) {
-        super(color, bold, italic, underlined, strikethrough, obfuscated, clickEvent, hoverEvent, insertion, extra);
+    protected TextComponent(TextColor color, Boolean bold, Boolean italic, Boolean underlined, Boolean strikethrough, Boolean obfuscated, String font, ClickEvent clickEvent, HoverEvent hoverEvent, String insertion, List<Component> extra, String text) {
+        super(color, bold, italic, underlined, strikethrough, obfuscated, font, clickEvent, hoverEvent, insertion, extra);
         this.text = text;
     }
 
