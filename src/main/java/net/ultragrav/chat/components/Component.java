@@ -60,6 +60,8 @@ public abstract class Component {
         this.strikethrough = builder.strikethrough;
         this.obfuscated = builder.obfuscated;
 
+        this.font = builder.font;
+
         this.clickEvent = builder.clickEvent;
         this.hoverEvent = builder.hoverEvent;
 
